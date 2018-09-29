@@ -27,7 +27,7 @@ func main() {
 		s += flag.Arg(i)
 	}
 
-	if(strings.Contains(s, `誤認識 登録`) || strings.Contains(s, `ご認識 登録`) || strings.Contains(s, `小錦 登録`)) {
+	if(strings.Contains(s, `誤認識 登録`)) {
 		os.Stdout.WriteString(ConvertShiftJIS(""))
 		writeNeedCollectWords()
 	} else {
