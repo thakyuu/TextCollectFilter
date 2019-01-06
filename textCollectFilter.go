@@ -25,11 +25,11 @@ func main() {
 		s += flag.Arg(i)
 	}
 
-	writeWords(s)
+	WriteWords(s)
 	os.Stdout.WriteString(ConvertShiftJIS(s))
 }
 
-func writeWords(s string) {
+func WriteWords(s string) {
 	file, err := os.OpenFile("./000_talk.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 600)
 	
 	if err != nil {
